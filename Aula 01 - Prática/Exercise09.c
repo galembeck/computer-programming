@@ -32,11 +32,11 @@ int main() {
         printf("\n\n The value of the exchange is: $%d.", exchange);
     
         printf("\n The number of bills of 20 dollars is: %d bills.", exchange/20);
-        exchange = exchange%20
+        exchange = exchange%20;
         printf("\n The number of bills of 10 dollars is: %d bills.", exchange/10);
-        exchange = exchange%10
+        exchange = exchange%10;
         printf("\n The number of bills of 5 dollars is: %d bills.", exchange/5);
-        exchange = exchange%5
+        exchange = exchange%5;
         printf("\n The number of bills of 1 dollar is: %d bills.", exchange);
     }
 }
