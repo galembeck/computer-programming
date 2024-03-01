@@ -1,28 +1,39 @@
 #include <stdio.h> // Including the <stdio.h> (standard input output) library.
 #include <stdlib.h> // Including the <stdlib.h> (system) library.
 
-/*  ExercÌcio 09:
-    Elabore um programa que faÁa a simulaÁ„o de um caixa de uma loja.
-    O usu·rio dever· digitar o valor da compra e o valor pago pelo cliente.
+/*  Exerc√≠cio 09:
+    Elabore um programa que fa√ßa a simula√ß√£o de um caixa de uma loja.
+    O usu√°rio dever√° digitar o valor da compra e o valor pago pelo cliente.
 
-    O programa ir· retornar o valor do troco, as cÈdulas que fazem parte
-    do troco e a quantidade de cada cÈdula.
+    O programa ir√° retornar o valor do troco, as c√©dulas que fazem parte
+    do troco e a quantidade de cada c√©dula.
 
-    Para este programa considere as cÈdulas de R$20, R$10, R$5 e R$1 real.
+    Para este programa considere as c√©dulas de R$20, R$10, R$5 e R$1 real.
 
-    Considere a possibilidade de n„o haver troco.
+    Considere a possibilidade de n√£o haver troco.
 */
 
 int main() {
-    float sale_price;
+    int sale_price;
 
     printf("\n Insert the price of the sale: ");
-    scanf("%f", &sale_price);
+    scanf("%d", &sale_price);
 
-    float payed_value;
+    int payed_value;
 
     printf("\n Insert the value payed by the customer: ");
-    scanf("%f", &payed_value);
+    scanf("%d", &payed_value);
 
-    float exchange = (payed_value - sale_price);
+    int exchange = (payed_value - sale_price);
+    
+    if (exchange == 0) {
+        printf("\n\n The value of the exchange is 0.");
+    } else {
+        printf("\n\n The value of the exchange is: $%d.", exchange);
+    
+        printf("\n The number of bills of 20 dollars is: %d bills.", exchange/20);
+        printf("\n The number of bills of 10 dollars is: %d bills.", exchange/10);
+        printf("\n The number of bills of 5 dollars is: %d bills.", exchange/5);
+        printf("\n The number of bills of 1 dollar is: %d bills.", exchange);
+    }
 }
