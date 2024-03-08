@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /* Desafio 02:
-    Construir um programa que faz a leitura de três número inteiros e imprime o maior.
+    Construir um programa que faz a leitura de trÃªs nÃºmero inteiros e imprime o maior.
 */
 
 int main() {
@@ -23,7 +23,7 @@ int main() {
 
     printf("\n\n The numbers inserted were: %d, %d and %d.", first_number, second_number, third_number);
 
-    if (first_number > second_number && first_number > second_number) {
+    if (first_number > second_number && first_number > third_number) {
         printf("\n The first number (%d) is the bigger among the others.\n\n", first_number);
     } else if (second_number > first_number && second_number > third_number) {
         printf("\n The second number (%d) is the bigger among the others.\n\n", second_number);
