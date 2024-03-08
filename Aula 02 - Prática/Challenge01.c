@@ -5,11 +5,11 @@
     Construir um programa que faz a leitura de duas notas de um aluno,
     N1 e N2, e os respectivos pesos, P1 e P2.
 
-    O programa deve calcular a média ponderada alcançada por aluno e apresentar:
+    O programa deve calcular a mÃ©dia ponderada alcanÃ§ada por aluno e apresentar:
 
-    • A mensagem "APROVADO", se a média alcançada for maior ou igual a sete;
-    • A mensagem "REPROVADO", se a média for menor do que sete;
-    • A mensagem "APROVADO COM DISTINÇÃO", se a média for igual a dez.
+    â€¢ A mensagem "APROVADO", se a mÃ©dia alcanÃ§ada for maior ou igual a sete;
+    â€¢ A mensagem "REPROVADO", se a mÃ©dia for menor do que sete;
+    â€¢ A mensagem "APROVADO COM DISTINÃ‡ÃƒO", se a mÃ©dia for igual a dez.
 */
 
 int main() {
@@ -32,11 +32,13 @@ int main() {
     printf("\n\n The student\'s average, given the grades and weights, is: %.2f.", average);
 
     if (average >= 7) {
-        printf("\n The student is approved!\n\n");
-    } else if (average < 7) {
-        printf("\n The student is disapproved!\n\n");
-    } else if (average == 10) {
-        printf("\n The student is approved with distinction.\n\n");
+        if (average == 10) {
+            printf("\n The student is approved with distinction.\n\n");
+        } else {
+            printf("\n The student is approved.\n\n");
+        }
+    } else {
+        printf("\n The student is disapproved.\n\n");
     }
 
     system("pause");
