@@ -29,6 +29,8 @@ int main() {
         printf("\n The second number (%d) is the bigger among the others.\n\n", second_number);
     } else if (third_number > first_number && third_number > second_number) {
         printf("\n The third number (%d) is the bigger among the others.\n\n", third_number);
+    } else if (first_number == second_number == third_number) {
+        printf("\n All the three numbers are equals.\n\n");
     }
 
     system("pause");
