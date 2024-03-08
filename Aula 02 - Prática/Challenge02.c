@@ -23,14 +23,18 @@ int main() {
 
     printf("\n\n The numbers inserted were: %d, %d and %d.", first_number, second_number, third_number);
 
-    if (first_number > second_number && first_number > third_number) {
-        printf("\n The first number (%d) is the bigger among the others.\n\n", first_number);
-    } else if (second_number > first_number && second_number > third_number) {
-        printf("\n The second number (%d) is the bigger among the others.\n\n", second_number);
-    } else if (third_number > first_number && third_number > second_number) {
-        printf("\n The third number (%d) is the bigger among the others.\n\n", third_number);
-    } else if (first_number == second_number == third_number) {
-        printf("\n All the three numbers are equals.\n\n");
+    if (first_number > second_number) {
+        if (first_number > third_number) {
+            printf("\n The first number (%d) is the bigger among the others.\n\n", first_number);
+        } else {
+            printf("\n The third number (%d) is the bigger among the others.\n\n", third_number);
+        }
+    } else {
+        if (second_number > third_number) {
+            printf("\n The second number (%d) is the bigger among the others.\n\n", second_number);
+        } else {
+            printf("\n The third number (%d) is the bigger among the others.\n\n", thid_number);
+        }
     }
 
     system("pause");
