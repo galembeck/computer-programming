@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* Desafio de sala 01:
+    Leia 10 valores e imprima o maior deles.
+*/
+
 int main() {
     int number, biggest_number;
     int counter = 0;
