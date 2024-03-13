@@ -1,64 +1,73 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* Exercício 01:
-    Faça um programa que receba dois números e execute as
-    operações listadas a seguir, de acordo com a escolha do usuário.
-    - 1: média entre os números digitados;
-    - 2: diferença do maior pelo menor;
-    - 3: produto entre os números digitados;
-    - 4: divisão do primeiro pelo segundo;
+/* ExercÃ­cio 01:
+    FaÃ§a um programa que receba dois nÃºmeros e execute as
+    operaÃ§Ãµes listadas a seguir, de acordo com a escolha do usuÃ¡rio.
+    â€¢ 1: MÃ©dia entre os nÃºmeros digitados;
+    â€¢ 2: DiferenÃ§a do maior pelo menor;
+    â€¢ 3: Produto entre os nÃºmeros digitados;
+    â€¢ 4: DivisÃ£o do primeiro pelo segundo;
 */
 
 int main() {
     float first_number, second_number;
 
-    float average, difference, multiplication, division;
-
-    printf("\n Insert the first number to be used in the operations: ");
+    printf("\n Insert the first number to be used in operations: ");
     scanf("%f", &first_number);
-    printf("\n Insert the second number to be used in the operations: ");
+    printf("\n Insert the second number to be used in operations: ");
     scanf("%f", &second_number);
 
-    printf("\n\n Choose one of the options below to perform a mathematical operation:");
-    printf("\n - 1: Average between the inserted numbers.");
-    printf("\n - 2: Difference between the bigger and smallest.");
-    printf("\n - 3: Multiply both numbers.");
-    printf("\n - 4: Divide the first number by the second number.");
+    printf("\n Choose, from the options below, the operation you want to perform:\n");
+    // printf("\n  -> Option 1: Provide the values for the numbers to be used.");
+    printf("\n  -> Option 1: Get the average between the given numbers.");
+    printf("\n  -> Option 2: Subtract and get the difference between the given numbers.");
+    printf("\n  -> Option 3: Multiply the given numbers.");
+    printf("\n  -> Option 4: Divide the first by the second given number.");
+    // printf("\n\n To leave/cancel, enter 5.");
 
-    int operation_number;
+    int operation_option;
+    float operation_result;
 
-    printf("\n\n Insert the number of the operation: ");
-    scanf("%d", &operation_number);
+    printf("\n Insert the number of the option chosen above: ");
+    scanf("%d", &operation_option);
 
-    switch (operation_number) {
-    case 1:
-        average = (first_number + second_number)/2;
-        printf("\n The average between the numbers %.2f and %.2f is: %.2f.\n\n", first_number, second_number, average);
-        break;
+    switch (operation_option) {
+        case 1:
+            operation_result = (first_number + second_number)/2;
 
-    case 2:
-        if (first_number > second_number) {
-            difference = (first_number - second_number);
-        } else {
-            difference = (second_number - first_number);
-        }
+            printf("\n The average between the numbers %.2f and %.2f is: %.2f.\n\n", first_number, second_number, operation_result);
 
-        printf("\n The difference between the numbers %.2f and %.2f is: %.2f.\n\n", first_number, second_number, difference);
-        break;
+            break;
 
-    case 3:
-        multiplication = (first_number * second_number);
-        printf("\n The multiplication between the numbers %.2f and %.2f is: %.2f.\n\n", first_number, second_number, multiplication);
-        break;
+        case 2:
+            if (first_number > second_number) {
+                operation_result = (first_number - second_number);
+            } else {
+                operation_result = (second_number - first_number);
+            }
 
-    case 4:
-        division = (first_number/second_number);
-        printf("\n The division between the numbers %.2f and %.2f is: %.2f.\n\n", first_number, second_number, division);
-        break;
+            printf("\n The difference between the numbers %.2f and %.2f is: %.2f.\n\n", first_number, second_number, operation_result);
 
-    default:
-        printf("\n Invalid operation! \n Please select one of the options listed above.\n\n");
+            break;
+
+        case 3:
+            operation_result = (first_number * second_number);
+
+            printf("\n The multiplication between the numbers %.2f and %.2f is: %.2f.\n\n", first_number, second_number, operation_result);
+
+            break;
+
+        case 4:
+            operation_result = (first_number/second_number);
+
+            printf("\n The division between the numbers %.2f and %.2f is: %.2f.\n\n", first_number, second_number, operation_result);
+
+            break;
+
+
+        default:
+            printf("\n\n Invalid option.\n Chose one option between the options listed above.\n\n");
     }
 
     system("pause");
